@@ -240,8 +240,25 @@ namespace HMSA
                 //int a;
 
                 dataGridView1.DataSource = ds.Tables[0];
+                if (textpid.Text == "")
+                {
+
+                    con.Open();
+                    cmd.CommandText = "insert into PatientDetails(pid) values('" + pid + "')";
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+                else
+                {
+                    con.Open();
+                    cmd.CommandText = "update PatientDetails set pid=" + pid + " ";
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
 
             }
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)

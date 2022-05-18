@@ -43,6 +43,7 @@ namespace HMSA
             this.webView21.Source = new System.Uri("http://localhost:3000/", System.UriKind.Absolute);
             this.webView21.TabIndex = 0;
             this.webView21.ZoomFactor = 1D;
+            this.webView21.Click += new System.EventHandler(this.webView21_Click);
             // 
             // Form2
             // 

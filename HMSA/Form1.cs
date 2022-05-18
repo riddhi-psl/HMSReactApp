@@ -370,11 +370,11 @@ namespace HMSA
             panelRegister.Visible = true;
         }
 
-        private void hyperLinkEdit1_OpenLink(object sender, DevExpress.XtraEditors.Controls.OpenLinkEventArgs e)
-        {
-            panelLogin.Visible = false;
-            panelRegister.Visible = true;
-        }
+        //private void hyperLinkEdit1_OpenLink(object sender, DevExpress.XtraEditors.Controls.OpenLinkEventArgs e)
+        //{
+        //    panelLogin.Visible = false;
+        //    panelRegister.Visible = true;
+        //}
 
         private void button1_Click_2(object sender, EventArgs e)
         {
