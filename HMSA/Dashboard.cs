@@ -398,7 +398,8 @@ namespace HMSA
 
         private void EditBtn_Click(object sender, EventArgs e)
         {
-            Form2 fm = new Form2();
+            int pid = int.Parse(textpid.Text);
+            Form2 fm = new Form2(pid);
             fm.Show();
         }
     }
