@@ -537,7 +537,7 @@ namespace HMSA
             this.panel3.Controls.Add(this.label17);
             this.panel3.Location = new System.Drawing.Point(1, 104);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(838, 524);
+            this.panel3.Size = new System.Drawing.Size(838, 359);
             this.panel3.TabIndex = 69;
             // 
             // dataGridView2
@@ -568,9 +568,9 @@ namespace HMSA
             this.panel4.Controls.Add(this.dataGridView3);
             this.panel4.Controls.Add(this.txtSendmsg);
             this.panel4.Controls.Add(this.webView);
-            this.panel4.Location = new System.Drawing.Point(1, 104);
+            this.panel4.Location = new System.Drawing.Point(1, 103);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(838, 525);
+            this.panel4.Size = new System.Drawing.Size(838, 326);
             this.panel4.TabIndex = 3;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 

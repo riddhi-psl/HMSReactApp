@@ -12,9 +12,12 @@ namespace HMSA
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        public Form2(int pid)
         {
+            string url = "http://localhost:3000/user/" + pid;
+
             InitializeComponent();
+            webView21.Source = new Uri(url);
         }
 
         private void webView21_Click(object sender, EventArgs e)
