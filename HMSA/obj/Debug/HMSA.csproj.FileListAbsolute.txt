@@ -858,7 +858,6 @@ C:\Users\riddhi_pal\source\repos\HMSReactApp\HMSA\bin\Debug\de\DevExpress.XtraNa
 C:\Users\riddhi_pal\source\repos\HMSReactApp\HMSA\bin\Debug\es\DevExpress.XtraNavBar.v21.2.resources.dll
 C:\Users\riddhi_pal\source\repos\HMSReactApp\HMSA\bin\Debug\ja\DevExpress.XtraNavBar.v21.2.resources.dll
 C:\Users\riddhi_pal\source\repos\HMSReactApp\HMSA\bin\Debug\ru\DevExpress.XtraNavBar.v21.2.resources.dll
-C:\Users\riddhi_pal\source\repos\HMSReactApp\HMSA\obj\Debug\HMSA.csproj.AssemblyReference.cache
 C:\Users\riddhi_pal\source\repos\HMSReactApp\HMSA\obj\Debug\HMSA.Dashboard.resources
 C:\Users\riddhi_pal\source\repos\HMSReactApp\HMSA\obj\Debug\HMSA.Form1.resources
 C:\Users\riddhi_pal\source\repos\HMSReactApp\HMSA\obj\Debug\HMSA.Form2.resources
