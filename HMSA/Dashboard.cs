@@ -31,13 +31,7 @@ namespace HMSA
         SqlCommand cmd;
 
         public string loginname { get; internal set; }
-
-        //private object lblStatus;
-
-        //public object RootNode { get; private set; }
-
-        // List<Panel> listPanel = new List<Panel>();
-
+        
 
         public Dashboard()
         {
@@ -50,11 +44,7 @@ namespace HMSA
             panel3.Location = panel1.Location;
             //panel4.Location = panel1.Location;
 
-            
         }
-
-      
-
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -63,9 +53,6 @@ namespace HMSA
             f.Show();
             this.Hide();
         }
-
-        
-
 
 
         private void labelIndecator3_Click(object sender, EventArgs e)
@@ -223,13 +210,34 @@ namespace HMSA
 
         }
 
+
+        public static string newName;
+        //public void changeName(string name)
+        //{
+        //   newName = name;
+        //   label18.Text = newName;
+        //}
+
+
+        public delegate void AutoCompleteDelegate();
+        public event AutoCompleteDelegate AutoCompleteUsed;
+
+        public void refreshreg()
+        {
+            string sqlstmt = "select * from AddPatient where pid='" + textpid.Text + "'";
+            SqlDataAdapter sda = new SqlDataAdapter(sqlstmt, con);
+            DataSet dset = new System.Data.DataSet();
+            sda.Fill(dset, "AddPatient");
+            dataGridView1.DataSource = dset.Tables[0];
+        }
+
         private void textpid_TextChanged(object sender, EventArgs e)
         {
 
-            if (textpid.Text != "")
+            if (textpid.Text != "" )
             {
+                
                 int pid = int.Parse(textpid.Text);
-
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
                 cmd.CommandText = "select * from AddPatient where pid=" + pid + "";
@@ -240,21 +248,11 @@ namespace HMSA
                 //int a;
 
                 dataGridView1.DataSource = ds.Tables[0];
-                if (textpid.Text == "")
-                {
 
-                    con.Open();
-                    cmd.CommandText = "insert into PatientDetails(pid) values('" + pid + "')";
-                    cmd.ExecuteNonQuery();
-                    con.Close();
-                }
-                else
-                {
-                    con.Open();
-                    cmd.CommandText = "update PatientDetails set pid=" + pid + " ";
-                    cmd.ExecuteNonQuery();
-                    con.Close();
-                }
+                //if (newName != " ")
+                //{
+                //    dataGridView1.DataSource = ds.Tables[0];
+                //}
 
             }
 
@@ -297,7 +295,8 @@ namespace HMSA
             panel4.Visible = false;
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "select * from AddPatient inner join PatientMore on AddPatient.pid=PatientMore.pid";
+            cmd.CommandText = "select * from AddPatient" ;
+            //cmd.CommandText = "select * from AddPatient inner join PatientMore on AddPatient.pid=PatientMore.pid";
             //cmd.ExecuteNonQuery();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
@@ -401,6 +400,43 @@ namespace HMSA
             int pid = int.Parse(textpid.Text);
             Form2 fm = new Form2(pid);
             fm.Show();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Refreshbtn_Click(object sender, EventArgs e)
+        {
+            if (textpid.Text != "")
+            {
+                int pid = int.Parse(textpid.Text);
+                //if (pid || )
+                //{
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = "select * from AddPatient where pid=" + pid + ""; 
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                dataGridView1.DataSource = ds.Tables[0];
+            }
+
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            
+            refreshreg();
+            timer1.Start();
+
         }
     }
 }

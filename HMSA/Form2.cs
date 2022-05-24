@@ -12,6 +12,9 @@ namespace HMSA
 {
     public partial class Form2 : Form
     {
+
+        public static string name;
+
         public Form2(int pid)
         {
             string url = "http://localhost:3000/user/" + pid;
@@ -24,5 +27,17 @@ namespace HMSA
         {
 
         }
+
+        private void webView21_WebMessageReceived(object sender, Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs e)
+        {
+            string name = e.TryGetWebMessageAsString();
+            //telling child class to use the existing dashboard obj of the parent class.
+            //Dashboard dashb = (Dashboard)this.Owner;
+            //dashb.changeName(name);
+            this.Hide();
+        }
+
+
+        
     }
 }

@@ -495,10 +495,28 @@ namespace HMSA
 
         private void button6_Click(object sender, EventArgs e)
         {
+            panelLogin.Visible = false;
+            panel2.Visible = false;
 
+            panelRegister.Visible = true;
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }

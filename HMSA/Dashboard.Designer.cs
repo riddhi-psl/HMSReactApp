@@ -29,6 +29,7 @@ namespace HMSA
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnAddPatient = new System.Windows.Forms.Button();
             this.btnAddMoreInfo = new System.Windows.Forms.Button();
@@ -55,6 +56,7 @@ namespace HMSA
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Refreshbtn = new System.Windows.Forms.Button();
             this.EditBtn = new System.Windows.Forms.Button();
             this.txtMedicines = new System.Windows.Forms.TextBox();
             this.txtDignosis = new System.Windows.Forms.TextBox();
@@ -77,32 +79,29 @@ namespace HMSA
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblRecivmsg = new System.Windows.Forms.Label();
             this.Sendmsg = new System.Windows.Forms.Button();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.txtSendmsg = new System.Windows.Forms.TextBox();
             this.webView = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.webView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExit
             // 
-            this.btnExit.BackColor = System.Drawing.Color.Red;
+            this.btnExit.BackColor = System.Drawing.Color.OrangeRed;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(887, 1);
+            this.btnExit.Location = new System.Drawing.Point(896, 5);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(143, 44);
+            this.btnExit.Size = new System.Drawing.Size(134, 38);
             this.btnExit.TabIndex = 8;
             this.btnExit.Text = "Log Out";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -111,9 +110,9 @@ namespace HMSA
             // btnAddPatient
             // 
             this.btnAddPatient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnAddPatient.Location = new System.Drawing.Point(7, 51);
+            this.btnAddPatient.Location = new System.Drawing.Point(12, 48);
             this.btnAddPatient.Name = "btnAddPatient";
-            this.btnAddPatient.Size = new System.Drawing.Size(213, 48);
+            this.btnAddPatient.Size = new System.Drawing.Size(216, 50);
             this.btnAddPatient.TabIndex = 28;
             this.btnAddPatient.Text = "Add New Patient Record";
             this.btnAddPatient.UseVisualStyleBackColor = false;
@@ -122,20 +121,20 @@ namespace HMSA
             // btnAddMoreInfo
             // 
             this.btnAddMoreInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnAddMoreInfo.Location = new System.Drawing.Point(221, 50);
+            this.btnAddMoreInfo.Location = new System.Drawing.Point(268, 49);
             this.btnAddMoreInfo.Name = "btnAddMoreInfo";
-            this.btnAddMoreInfo.Size = new System.Drawing.Size(186, 48);
+            this.btnAddMoreInfo.Size = new System.Drawing.Size(216, 50);
             this.btnAddMoreInfo.TabIndex = 29;
-            this.btnAddMoreInfo.Text = "Add More Info.";
+            this.btnAddMoreInfo.Text = "Add More Information";
             this.btnAddMoreInfo.UseVisualStyleBackColor = false;
             this.btnAddMoreInfo.Click += new System.EventHandler(this.btnAddMoreInfo_Click);
             // 
             // btnHistory
             // 
             this.btnHistory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnHistory.Location = new System.Drawing.Point(413, 51);
+            this.btnHistory.Location = new System.Drawing.Point(538, 49);
             this.btnHistory.Name = "btnHistory";
-            this.btnHistory.Size = new System.Drawing.Size(170, 48);
+            this.btnHistory.Size = new System.Drawing.Size(216, 50);
             this.btnHistory.TabIndex = 30;
             this.btnHistory.Text = "All Patient History";
             this.btnHistory.UseVisualStyleBackColor = false;
@@ -144,9 +143,9 @@ namespace HMSA
             // btnHospitalInfo
             // 
             this.btnHospitalInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnHospitalInfo.Location = new System.Drawing.Point(589, 49);
+            this.btnHospitalInfo.Location = new System.Drawing.Point(795, 49);
             this.btnHospitalInfo.Name = "btnHospitalInfo";
-            this.btnHospitalInfo.Size = new System.Drawing.Size(230, 48);
+            this.btnHospitalInfo.Size = new System.Drawing.Size(216, 50);
             this.btnHospitalInfo.TabIndex = 31;
             this.btnHospitalInfo.Text = "Hospital Information";
             this.btnHospitalInfo.UseVisualStyleBackColor = false;
@@ -176,7 +175,7 @@ namespace HMSA
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(1, 105);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(838, 524);
+            this.panel1.Size = new System.Drawing.Size(1029, 524);
             this.panel1.TabIndex = 33;
             // 
             // btnSave
@@ -193,7 +192,7 @@ namespace HMSA
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(656, 345);
+            this.radioButton2.Location = new System.Drawing.Point(750, 339);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(87, 24);
             this.radioButton2.TabIndex = 51;
@@ -204,7 +203,7 @@ namespace HMSA
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(564, 345);
+            this.radioButton1.Location = new System.Drawing.Point(658, 339);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(68, 24);
             this.radioButton1.TabIndex = 50;
@@ -214,7 +213,7 @@ namespace HMSA
             // 
             // txtAny
             // 
-            this.txtAny.Location = new System.Drawing.Point(460, 274);
+            this.txtAny.Location = new System.Drawing.Point(554, 268);
             this.txtAny.Multiline = true;
             this.txtAny.Name = "txtAny";
             this.txtAny.Size = new System.Drawing.Size(358, 35);
@@ -223,7 +222,7 @@ namespace HMSA
             // 
             // txtPid
             // 
-            this.txtPid.Location = new System.Drawing.Point(543, 131);
+            this.txtPid.Location = new System.Drawing.Point(637, 125);
             this.txtPid.Multiline = true;
             this.txtPid.Name = "txtPid";
             this.txtPid.Size = new System.Drawing.Size(275, 35);
@@ -239,7 +238,7 @@ namespace HMSA
             // 
             // txtAge
             // 
-            this.txtAge.Location = new System.Drawing.Point(141, 344);
+            this.txtAge.Location = new System.Drawing.Point(235, 338);
             this.txtAge.Multiline = true;
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(275, 35);
@@ -247,7 +246,7 @@ namespace HMSA
             // 
             // txtContactNumber
             // 
-            this.txtContactNumber.Location = new System.Drawing.Point(141, 274);
+            this.txtContactNumber.Location = new System.Drawing.Point(235, 268);
             this.txtContactNumber.Multiline = true;
             this.txtContactNumber.Name = "txtContactNumber";
             this.txtContactNumber.Size = new System.Drawing.Size(275, 35);
@@ -255,7 +254,7 @@ namespace HMSA
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(141, 202);
+            this.txtAddress.Location = new System.Drawing.Point(235, 196);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(275, 35);
@@ -263,7 +262,7 @@ namespace HMSA
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(141, 131);
+            this.txtName.Location = new System.Drawing.Point(235, 125);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(275, 35);
@@ -272,7 +271,7 @@ namespace HMSA
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(466, 347);
+            this.label10.Location = new System.Drawing.Point(560, 341);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(63, 20);
             this.label10.TabIndex = 42;
@@ -281,7 +280,7 @@ namespace HMSA
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(456, 217);
+            this.label9.Location = new System.Drawing.Point(550, 211);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(256, 20);
             this.label9.TabIndex = 41;
@@ -290,7 +289,7 @@ namespace HMSA
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(456, 134);
+            this.label8.Location = new System.Drawing.Point(550, 128);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 20);
             this.label8.TabIndex = 40;
@@ -308,7 +307,7 @@ namespace HMSA
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(26, 347);
+            this.label6.Location = new System.Drawing.Point(120, 341);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 20);
             this.label6.TabIndex = 38;
@@ -317,7 +316,7 @@ namespace HMSA
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 277);
+            this.label5.Location = new System.Drawing.Point(104, 271);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(125, 20);
             this.label5.TabIndex = 37;
@@ -326,7 +325,7 @@ namespace HMSA
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 205);
+            this.label4.Location = new System.Drawing.Point(120, 199);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 20);
             this.label4.TabIndex = 36;
@@ -335,7 +334,7 @@ namespace HMSA
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 134);
+            this.label3.Location = new System.Drawing.Point(120, 128);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 20);
             this.label3.TabIndex = 35;
@@ -345,7 +344,7 @@ namespace HMSA
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(236, 43);
+            this.label2.Location = new System.Drawing.Point(330, 37);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(346, 32);
             this.label2.TabIndex = 34;
@@ -354,6 +353,7 @@ namespace HMSA
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.panel2.Controls.Add(this.Refreshbtn);
             this.panel2.Controls.Add(this.EditBtn);
             this.panel2.Controls.Add(this.txtMedicines);
             this.panel2.Controls.Add(this.txtDignosis);
@@ -370,16 +370,26 @@ namespace HMSA
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.textpid);
             this.panel2.Controls.Add(this.label20);
-            this.panel2.Location = new System.Drawing.Point(1, 104);
+            this.panel2.Location = new System.Drawing.Point(1, 108);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(838, 524);
+            this.panel2.Size = new System.Drawing.Size(1029, 520);
             this.panel2.TabIndex = 53;
+            // 
+            // Refreshbtn
+            // 
+            this.Refreshbtn.Location = new System.Drawing.Point(618, 94);
+            this.Refreshbtn.Name = "Refreshbtn";
+            this.Refreshbtn.Size = new System.Drawing.Size(110, 37);
+            this.Refreshbtn.TabIndex = 70;
+            this.Refreshbtn.Text = "Refresh";
+            this.Refreshbtn.UseVisualStyleBackColor = true;
+            this.Refreshbtn.Click += new System.EventHandler(this.Refreshbtn_Click);
             // 
             // EditBtn
             // 
             this.EditBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.EditBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditBtn.Location = new System.Drawing.Point(705, 445);
+            this.EditBtn.Location = new System.Drawing.Point(773, 404);
             this.EditBtn.Name = "EditBtn";
             this.EditBtn.Size = new System.Drawing.Size(113, 47);
             this.EditBtn.TabIndex = 69;
@@ -389,7 +399,7 @@ namespace HMSA
             // 
             // txtMedicines
             // 
-            this.txtMedicines.Location = new System.Drawing.Point(124, 442);
+            this.txtMedicines.Location = new System.Drawing.Point(202, 415);
             this.txtMedicines.Multiline = true;
             this.txtMedicines.Name = "txtMedicines";
             this.txtMedicines.Size = new System.Drawing.Size(252, 40);
@@ -397,7 +407,7 @@ namespace HMSA
             // 
             // txtDignosis
             // 
-            this.txtDignosis.Location = new System.Drawing.Point(124, 378);
+            this.txtDignosis.Location = new System.Drawing.Point(202, 353);
             this.txtDignosis.Multiline = true;
             this.txtDignosis.Name = "txtDignosis";
             this.txtDignosis.Size = new System.Drawing.Size(252, 40);
@@ -409,14 +419,14 @@ namespace HMSA
             this.comboBox2.Items.AddRange(new object[] {
             "General ",
             "Single"});
-            this.comboBox2.Location = new System.Drawing.Point(613, 365);
+            this.comboBox2.Location = new System.Drawing.Point(691, 340);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(195, 28);
             this.comboBox2.TabIndex = 65;
             // 
             // txtSymptoms
             // 
-            this.txtSymptoms.Location = new System.Drawing.Point(124, 316);
+            this.txtSymptoms.Location = new System.Drawing.Point(202, 291);
             this.txtSymptoms.Multiline = true;
             this.txtSymptoms.Name = "txtSymptoms";
             this.txtSymptoms.Size = new System.Drawing.Size(252, 40);
@@ -425,7 +435,7 @@ namespace HMSA
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(476, 373);
+            this.label11.Location = new System.Drawing.Point(554, 348);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(106, 20);
             this.label11.TabIndex = 63;
@@ -434,7 +444,7 @@ namespace HMSA
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(476, 316);
+            this.label12.Location = new System.Drawing.Point(554, 291);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(122, 20);
             this.label12.TabIndex = 62;
@@ -443,7 +453,7 @@ namespace HMSA
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(24, 445);
+            this.label13.Location = new System.Drawing.Point(102, 418);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(80, 20);
             this.label13.TabIndex = 61;
@@ -452,7 +462,7 @@ namespace HMSA
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(26, 382);
+            this.label14.Location = new System.Drawing.Point(104, 357);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(70, 20);
             this.label14.TabIndex = 60;
@@ -462,7 +472,7 @@ namespace HMSA
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(26, 328);
+            this.label15.Location = new System.Drawing.Point(104, 303);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(87, 20);
             this.label15.TabIndex = 59;
@@ -471,20 +481,21 @@ namespace HMSA
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(288, 82);
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(281, 101);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(80, 20);
+            this.label16.Size = new System.Drawing.Size(96, 25);
             this.label16.TabIndex = 58;
             this.label16.Text = "Patient ID";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 148);
+            this.dataGridView1.Location = new System.Drawing.Point(30, 158);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(778, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(980, 90);
             this.dataGridView1.TabIndex = 57;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -494,7 +505,7 @@ namespace HMSA
             this.comboBox1.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.comboBox1.Location = new System.Drawing.Point(613, 313);
+            this.comboBox1.Location = new System.Drawing.Point(691, 288);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(195, 28);
             this.comboBox1.TabIndex = 56;
@@ -503,7 +514,7 @@ namespace HMSA
             // 
             this.button1.BackColor = System.Drawing.Color.Lime;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(566, 445);
+            this.button1.Location = new System.Drawing.Point(634, 404);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 48);
             this.button1.TabIndex = 55;
@@ -513,7 +524,7 @@ namespace HMSA
             // 
             // textpid
             // 
-            this.textpid.Location = new System.Drawing.Point(393, 79);
+            this.textpid.Location = new System.Drawing.Point(388, 91);
             this.textpid.Multiline = true;
             this.textpid.Name = "textpid";
             this.textpid.Size = new System.Drawing.Size(205, 40);
@@ -524,7 +535,7 @@ namespace HMSA
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(117, 23);
+            this.label20.Location = new System.Drawing.Point(213, 29);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(608, 37);
             this.label20.TabIndex = 53;
@@ -535,10 +546,11 @@ namespace HMSA
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel3.Controls.Add(this.dataGridView2);
             this.panel3.Controls.Add(this.label17);
-            this.panel3.Location = new System.Drawing.Point(1, 104);
+            this.panel3.Location = new System.Drawing.Point(1, 596);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(838, 359);
+            this.panel3.Size = new System.Drawing.Size(1029, 33);
             this.panel3.TabIndex = 69;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // dataGridView2
             // 
@@ -547,14 +559,14 @@ namespace HMSA
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(804, 367);
+            this.dataGridView2.Size = new System.Drawing.Size(996, 367);
             this.dataGridView2.TabIndex = 2;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(213, 39);
+            this.label17.Location = new System.Drawing.Point(309, 38);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(419, 37);
             this.label17.TabIndex = 1;
@@ -565,12 +577,11 @@ namespace HMSA
             this.panel4.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel4.Controls.Add(this.lblRecivmsg);
             this.panel4.Controls.Add(this.Sendmsg);
-            this.panel4.Controls.Add(this.dataGridView3);
             this.panel4.Controls.Add(this.txtSendmsg);
             this.panel4.Controls.Add(this.webView);
-            this.panel4.Location = new System.Drawing.Point(1, 103);
+            this.panel4.Location = new System.Drawing.Point(1, 108);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(838, 326);
+            this.panel4.Size = new System.Drawing.Size(1029, 521);
             this.panel4.TabIndex = 3;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
@@ -578,7 +589,7 @@ namespace HMSA
             // 
             this.lblRecivmsg.AutoSize = true;
             this.lblRecivmsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecivmsg.Location = new System.Drawing.Point(447, 25);
+            this.lblRecivmsg.Location = new System.Drawing.Point(710, 23);
             this.lblRecivmsg.Name = "lblRecivmsg";
             this.lblRecivmsg.Size = new System.Drawing.Size(265, 25);
             this.lblRecivmsg.TabIndex = 70;
@@ -587,7 +598,7 @@ namespace HMSA
             // 
             // Sendmsg
             // 
-            this.Sendmsg.Location = new System.Drawing.Point(280, 24);
+            this.Sendmsg.Location = new System.Drawing.Point(328, 19);
             this.Sendmsg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Sendmsg.Name = "Sendmsg";
             this.Sendmsg.Size = new System.Drawing.Size(136, 36);
@@ -596,23 +607,13 @@ namespace HMSA
             this.Sendmsg.UseVisualStyleBackColor = true;
             this.Sendmsg.Click += new System.EventHandler(this.Sendmsg_Click);
             // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(848, 44);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 62;
-            this.dataGridView3.RowTemplate.Height = 28;
-            this.dataGridView3.Size = new System.Drawing.Size(181, 194);
-            this.dataGridView3.TabIndex = 0;
-            // 
             // txtSendmsg
             // 
-            this.txtSendmsg.Location = new System.Drawing.Point(14, 26);
+            this.txtSendmsg.Location = new System.Drawing.Point(54, 19);
             this.txtSendmsg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSendmsg.Multiline = true;
             this.txtSendmsg.Name = "txtSendmsg";
-            this.txtSendmsg.Size = new System.Drawing.Size(253, 33);
+            this.txtSendmsg.Size = new System.Drawing.Size(253, 36);
             this.txtSendmsg.TabIndex = 71;
             this.txtSendmsg.TextChanged += new System.EventHandler(this.txtSendmsg_TextChanged);
             // 
@@ -623,7 +624,7 @@ namespace HMSA
             this.webView.DefaultBackgroundColor = System.Drawing.Color.White;
             this.webView.Location = new System.Drawing.Point(6, 66);
             this.webView.Name = "webView";
-            this.webView.Size = new System.Drawing.Size(829, 447);
+            this.webView.Size = new System.Drawing.Size(1016, 447);
             this.webView.Source = new System.Uri("C:\\Users\\sneha_patil2\\source\\repos\\HMSF\\HMSA\\HtmlSample_\\SampleWebMessage.html", System.UriKind.Absolute);
             this.webView.TabIndex = 0;
             this.webView.ZoomFactor = 1D;
@@ -642,9 +643,9 @@ namespace HMSA
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button2.Location = new System.Drawing.Point(281, 51);
+            this.button2.Location = new System.Drawing.Point(431, 49);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(243, 46);
+            this.button2.Size = new System.Drawing.Size(185, 50);
             this.button2.TabIndex = 71;
             this.button2.Text = "Hospital Image";
             this.button2.UseVisualStyleBackColor = false;
@@ -655,20 +656,14 @@ namespace HMSA
             this.pictureBox1.Image = global::HMSA.Properties.Resources.i3;
             this.pictureBox1.Location = new System.Drawing.Point(1, 105);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(838, 524);
+            this.pictureBox1.Size = new System.Drawing.Size(1029, 524);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox3
+            // timer1
             // 
-            this.pictureBox3.Image = global::HMSA.Properties.Resources.i67;
-            this.pictureBox3.Location = new System.Drawing.Point(842, 51);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(188, 577);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 27;
-            this.pictureBox3.TabStop = false;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Dashboard
             // 
@@ -682,12 +677,11 @@ namespace HMSA
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnAddMoreInfo);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnHospitalInfo);
             this.Controls.Add(this.btnHistory);
-            this.Controls.Add(this.btnAddMoreInfo);
             this.Controls.Add(this.btnAddPatient);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnExit);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
@@ -702,10 +696,8 @@ namespace HMSA
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.webView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -713,8 +705,6 @@ namespace HMSA
 
         #endregion
         private System.Windows.Forms.Button btnExit;
-        //private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btnAddPatient;
         private System.Windows.Forms.Button btnAddMoreInfo;
         private System.Windows.Forms.Button btnHistory;
@@ -761,12 +751,13 @@ namespace HMSA
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel panel4;
         private Microsoft.Web.WebView2.WinForms.WebView2 webView;
-        private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Label lblRecivmsg;
         private System.Windows.Forms.TextBox txtSendmsg;
         private System.Windows.Forms.Button Sendmsg;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button EditBtn;
+        private System.Windows.Forms.Button Refreshbtn;
+        private System.Windows.Forms.Timer timer1;
     }
 }
