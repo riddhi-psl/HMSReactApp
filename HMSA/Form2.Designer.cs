@@ -40,7 +40,6 @@ namespace HMSA
             this.webView21.Location = new System.Drawing.Point(1, 0);
             this.webView21.Name = "webView21";
             this.webView21.Size = new System.Drawing.Size(1149, 710);
-            this.webView21.Source = new System.Uri("http://localhost:4000/", System.UriKind.Absolute);
             this.webView21.TabIndex = 0;
             this.webView21.ZoomFactor = 1D;
             this.webView21.WebMessageReceived += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs>(this.webView21_WebMessageReceived);

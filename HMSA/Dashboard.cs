@@ -211,24 +211,17 @@ namespace HMSA
         }
 
 
-        public static string newName;
-        //public void changeName(string name)
-        //{
-        //   newName = name;
-        //   label18.Text = newName;
-        //}
-
-
-        public delegate void AutoCompleteDelegate();
-        public event AutoCompleteDelegate AutoCompleteUsed;
-
-        public void refreshreg()
+        public void refreshreg(string cond)
         {
-            string sqlstmt = "select * from AddPatient where pid='" + textpid.Text + "'";
-            SqlDataAdapter sda = new SqlDataAdapter(sqlstmt, con);
-            DataSet dset = new System.Data.DataSet();
-            sda.Fill(dset, "AddPatient");
-            dataGridView1.DataSource = dset.Tables[0];
+            if (cond == "true")
+            {
+                string sqlstmt = "select * from AddPatient where pid='" + textpid.Text + "'";
+                SqlDataAdapter sda = new SqlDataAdapter(sqlstmt, con);
+                DataSet dset = new System.Data.DataSet();
+                sda.Fill(dset, "AddPatient");
+                dataGridView1.DataSource = dset.Tables[0];
+            }
+            
         }
 
         private void textpid_TextChanged(object sender, EventArgs e)
@@ -248,11 +241,6 @@ namespace HMSA
                 //int a;
 
                 dataGridView1.DataSource = ds.Tables[0];
-
-                //if (newName != " ")
-                //{
-                //    dataGridView1.DataSource = ds.Tables[0];
-                //}
 
             }
 
@@ -399,7 +387,7 @@ namespace HMSA
         {
             int pid = int.Parse(textpid.Text);
             Form2 fm = new Form2(pid);
-            fm.Show();
+            fm.ShowDialog(this);
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -431,11 +419,53 @@ namespace HMSA
             
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void txtBlood_TextChanged(object sender, EventArgs e)
         {
-            
-            refreshreg();
-            timer1.Start();
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
 
         }
     }

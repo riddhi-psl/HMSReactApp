@@ -71,7 +71,7 @@ namespace HMSA
             // 
             // panelRegister
             // 
-            this.panelRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panelRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.panelRegister.Controls.Add(this.panel2);
             this.panelRegister.Controls.Add(this.id);
             this.panelRegister.Controls.Add(this.name);
@@ -93,7 +93,7 @@ namespace HMSA
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.button7);
@@ -104,20 +104,19 @@ namespace HMSA
             this.panel2.Controls.Add(this.label12);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(528, 360);
+            this.panel2.Size = new System.Drawing.Size(528, 361);
             this.panel2.TabIndex = 10;
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(191)))), ((int)(((byte)(219)))));
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.Blue;
+            this.button6.ForeColor = System.Drawing.Color.MediumBlue;
             this.button6.Location = new System.Drawing.Point(282, 281);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(196, 43);
             this.button6.TabIndex = 9;
-            this.button6.Text = "Register Here...";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Text = "Register Here";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -125,7 +124,7 @@ namespace HMSA
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(69, 290);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(196, 25);
@@ -135,8 +134,9 @@ namespace HMSA
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.Gainsboro;
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(154)))), ((int)(((byte)(237)))));
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Location = new System.Drawing.Point(223, 216);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(100, 40);
@@ -230,8 +230,9 @@ namespace HMSA
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(154)))), ((int)(((byte)(237)))));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(296, 296);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 50);
@@ -242,8 +243,9 @@ namespace HMSA
             // 
             // BtnRegistration
             // 
-            this.BtnRegistration.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.BtnRegistration.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(154)))), ((int)(((byte)(237)))));
             this.BtnRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRegistration.ForeColor = System.Drawing.Color.White;
             this.BtnRegistration.Location = new System.Drawing.Point(167, 296);
             this.BtnRegistration.Name = "BtnRegistration";
             this.BtnRegistration.Size = new System.Drawing.Size(113, 50);
@@ -322,7 +324,7 @@ namespace HMSA
             // 
             // panelLogin
             // 
-            this.panelLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panelLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.panelLogin.Controls.Add(this.button2);
             this.panelLogin.Controls.Add(this.label8);
             this.panelLogin.Controls.Add(this.btnLogin);
@@ -333,24 +335,23 @@ namespace HMSA
             this.panelLogin.Controls.Add(this.AL);
             this.panelLogin.Location = new System.Drawing.Point(224, 130);
             this.panelLogin.Name = "panelLogin";
-            this.panelLogin.Size = new System.Drawing.Size(528, 357);
+            this.panelLogin.Size = new System.Drawing.Size(528, 364);
             this.panelLogin.TabIndex = 8;
             this.panelLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLogin_Paint);
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(191)))), ((int)(((byte)(219)))));
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Blue;
+            this.button2.ForeColor = System.Drawing.Color.MediumBlue;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(282, 281);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(196, 43);
             this.button2.TabIndex = 9;
-            this.button2.Text = "Register Here...";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Text = "Register Here";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
@@ -359,7 +360,7 @@ namespace HMSA
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(69, 290);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(196, 25);
@@ -369,11 +370,12 @@ namespace HMSA
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(154)))), ((int)(((byte)(237)))));
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(223, 216);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(100, 40);
+            this.btnLogin.Size = new System.Drawing.Size(109, 51);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -442,8 +444,9 @@ namespace HMSA
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.DarkGray;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(154)))), ((int)(((byte)(237)))));
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(391, 68);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(165, 50);
@@ -454,8 +457,9 @@ namespace HMSA
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.DarkGray;
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(154)))), ((int)(((byte)(237)))));
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Location = new System.Drawing.Point(573, 68);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(165, 50);

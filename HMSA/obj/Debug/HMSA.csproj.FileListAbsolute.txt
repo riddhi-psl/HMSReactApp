@@ -867,3 +867,4 @@ C:\Users\riddhi_pal\source\repos\HMSReactApp\HMSA\obj\Debug\HMSA.csproj.CoreComp
 C:\Users\riddhi_pal\source\repos\HMSReactApp\HMSA\obj\Debug\HMSA.csproj.CopyComplete
 C:\Users\riddhi_pal\source\repos\HMSReactApp\HMSA\obj\Debug\HMSA.exe
 C:\Users\riddhi_pal\source\repos\HMSReactApp\HMSA\obj\Debug\HMSA.pdb
+C:\Users\riddhi_pal\source\repos\HMSReactApp\HMSA\obj\Debug\HMSA.csproj.AssemblyReference.cache

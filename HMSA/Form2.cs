@@ -32,8 +32,8 @@ namespace HMSA
         {
             string name = e.TryGetWebMessageAsString();
             //telling child class to use the existing dashboard obj of the parent class.
-            //Dashboard dashb = (Dashboard)this.Owner;
-            //dashb.changeName(name);
+            Dashboard dashb = (Dashboard)this.Owner;
+            dashb.refreshreg(name);
             this.Hide();
         }
 
